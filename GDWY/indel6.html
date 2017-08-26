@@ -1,0 +1,471 @@
+﻿https://github.com<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>广州大学</title>
+	<link rel="stylesheet" type="text/css" href="css/main6.css">
+
+
+        <script type="text/javascript">
+         window.onload = function () {
+             var container = document.getElementById('container');
+             var list = document.getElementById('list');
+             var buttons = document.getElementById('buttons').getElementsByTagName('span');
+             var prev = document.getElementById('prev');
+             var next = document.getElementById('next');
+             var index = 1 ;
+
+             function showButton() {
+                for  (var i =0 ;i < buttons.length; i++) {
+                  if (buttons[i].className =='on') {
+                    buttons[i].className = '';
+                    break;
+                  }
+                }
+                buttons[index - 1].className = 'on';
+             }
+              
+              function animate(offset) {
+                var newLeft = parseInt(list.style.left) + offset;
+                list.style.left=newLeft + 'px';
+                 if (newLeft > -1000) {
+                      list.style.left = -5000 + 'px' ;
+                 }
+                 if (newLeft < -5000) {
+                     list.style.left = -1000 + 'px' ;
+                 }
+              }
+
+             next.onclick = function () {
+                if (index == 5) {
+                     index = 1 ;
+                  }
+                  else {
+                     index += 1;
+                  }
+
+              showButton();
+              animate(-1000);
+             }
+             prev.onclick = function () {
+               if (index == 1) {
+                    index =5;
+               }
+               else {
+                   index -= 1;
+               }
+               showButton();
+               animate(1000);
+             }        
+         }
+      </script>
+
+</head>
+<body>
+	<div class="headerBar">
+        <div class="topBar">
+            <div class="comWidth">
+                 <div class="leftArea">    </div>
+               <div class="rightArea">
+              <a href="javascript:void(0);">手机版</a>
+              <a href="https://cas.gzhu.edu.cn/cas_server/login">数字广大</a>
+              <a href="http://mail.gzhu.edu.cn/">电子邮箱</a>
+              <a href="http://lib.gzhu.edu.cn/w/">图书馆</a>
+              <a href="http://en/wzdt.htm">网站地图</a>
+              <img id="sou" alt src="http://www.gzhu.edu.cn/images/sou.png">
+                  </div> 
+               <div class="search_box">
+                 <input type="text" class="search_text">
+                 <input type="button" value="搜索" class="search_btn">
+              </div>            
+            </div>
+
+        </div>
+
+   <div class="logoBar">
+     <div class="comWidth">
+        <div class="logo-1">
+         <a href="http://www.gzhu.edu.cn/index.htm" title="广州大学主站"><img src="http://www.gzhu.edu.cn/images/logo.png" title="广州大学主站" ></a>
+        </div>
+         <div class="logo-2">
+          <img alt src="http://www.gzhu.edu.cn/images/xiaoxun.png" >
+         </div>
+     </div>
+
+   </div>
+   <div class="navBox">
+   <div class="comWidth">
+      <div class="shouye">
+      <a href="http://www.gzhu.edu.cn/index.htm" target="—blank"><img src="http://www.gzhu.edu.cn/images/home.png" border="0"></a>
+      </div>
+      <ul class="nav">
+      <li><a href="http://www.gzhu.edu.cn/xxgk.htm">学校概况</a></li>
+      <li><a href="http://www.gzhu.edu.cn/zzjg.htm">学校概况</a></li>
+      <li><a href="http://www.gzhu.edu.cn/szdw.htm">师资队伍</a></li>
+      <li><a href="http://www.gzhu.edu.cn/rcpy.htm">师资队伍</a></li>
+      <li><a href="http://www.gzhu.edu.cn/kxyj.htm">科学研究</a></li>
+      <li><a href="http://www.gzhu.edu.cn/xkjs.htm">学科建设</a></li>
+      <li><a href="http://www.gzhu.edu.cn/rczp.htm">人才招娉</a></li>
+      <li><a href="http://zsjy.gzhu.edu.cn/index/zs_.htm">招生就业</a></li>
+      <li><a href="http://www.gzhu.edu.cn/hzjl.htm">合作交流</a></li>
+      </ul>
+   </div>
+   </div>
+</div>    
+  <div id="container">
+    <div id="list" style="left:-1000px;">
+       <img src=http://www.gzhu.edu.cn/__local/9/FD/D9/352A26CF718200E2B8D435E031F_7DBB01EA_6BD35.jpg?e=.jpg" alt=""/>
+       <img src="http://www.gzhu.edu.cn/__local/D/C8/10/64BAB260604B4168FBDE0F00585_44E1D342_6580A.jpg?e=.jpg" alt=""/>
+        <img src="http://www.gzhu.edu.cn/__local/8/4A/A9/4B9A87910B8F39D389077037037_781F101E_21425.jpg" alt=""/>
+        <img src="http://www.gzhu.edu.cn/__local/7/93/AE/1181E5BB548132B85E59BAC534E_9F31A449_857DC.jpg?e=.jpg" alt=""/>
+        <img src="http://www.gzhu.edu.cn/__local/8/50/C3/2AC520CCD477ED8631CF815315D_F88629E5_5F450.jpg?e=.jpg" alt=""/>
+        <img src="http://www.gzhu.edu.cn/__local/9/FD/D9/352A26CF718200E2B8D435E031F_7DBB01EA_6BD35.jpg?e=.jpg" alt=""/>
+        <img src="http://www.gzhu.edu.cn/__local/D/C8/10/64BAB260604B4168FBDE0F00585_44E1D342_6580A.jpg?e=.jpg" alt=""/>      
+    </div>
+     <div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+     </div>
+      <a href="javascript:;" class="arrow" id="prev">&lt;</a>
+      <a href="javascript:;" class="arrow" id="next">&gt;</a>
+  </div>
+   <div class="main">
+     <div class="main-1">
+       <div class="main-1-left">
+        <div class="main-1-left-box1">
+          <div class="main-1-left-box1-top">
+            <p>
+               <span class="bt">广大新闻</span>
+               <span class="more">
+                    <a href="http://news.gzhu.edu.cn/">更多></a>
+               </span>
+            </p>
+          </div>
+          <div class="main-1-left-box1-bottom">
+            <div class="main-1-left-box1-bottom-left">
+              <div class="news-left">
+                  <a href="http://news.gzhu.edu.cn/tupianxinwen/2017-08-07/24370.html" target="_blank">
+                  <img alt src="http://news.gzhu.edu.cn/d/file/tupianxinwen/2017-08-07/2505c26899c060a3f082658709348875.jpg" >
+                  </a>
+              </div>
+              <div class="news-right">
+                 <h4><a href="http://news.gzhu.edu.cn/tupianxinwen/2017-08-07/24370.html" target="_blank">我校基层党组织书记专题培训班在井冈山开班...</a></h4>
+                 <p><a href="http://news.gzhu.edu.cn/tupianxinwen/2017-08-07/24370.html" target="_blank">8月7日上午，我校基层党组织书记专题培训班在江西井冈山青年干部培训中心正式开班，全校各基层党组织书记共80多人参加培训。校党…&nbsp;&nbsp;(08-07)</a></p>
+              </div>
+            </div>
+            <div class="main-1-left-box1-bottom-right">
+              <ul>
+               <li><a href="http://news.gzhu.edu.cn/guangdayaowen/2017-08-22/24386.html" target="_blank" title="我校教授作品获评“中国梦”主题歌曲创作征集之“网络优秀歌曲”">我校教授作品获评“中国梦”主题歌曲创...</a><span>08-22</span></li>
+               <li><a href="http://news.gzhu.edu.cn/guangdayaowen/2017-08-21/24384.html" target="_blank" title="我校获批组建广东省现代农业科技创新中心">我校获批组建广东省现代农业科技创新中...</a><span>08-21</span></li>
+               <li><a href="http://news.gzhu.edu.cn/guangdayaowen/2017-08-21/24383.html" target="_blank" title="我校召开赴西藏基层工作毕业生座谈会">我校召开赴西藏基层工作毕业生座谈会...</a>
+               <span>08-21</span></li>
+               <li><a href="http://news.gzhu.edu.cn/guangdayaowen/2017-08-19/24382.html" target="_blank" title="我校2017国家自然科学基金项目立项创佳绩">我校2017国家自然科学基金项目立项创佳...</a>
+               <span>08-19</span></li>
+               <li><a href="http://news.gzhu.edu.cn/guangdayaowen/2017-08-17/24380.html" target="_blank" title="【高水平大学建设】我校斩获2017年国家自然科学基金优秀青年基金项目">【高水平大学建设】我校斩获2017年国家...</a>
+               <span>08-17</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main-1-left-box2">
+          <div class="main-1-left-box2-left">
+              <div class="main-1-left-box2-left-tongzhi">
+
+           <div class="main-1-left-box2-left-tongzhi-top">
+             <p>
+                <span class="bt">通知公告</span>
+                <span class="more">
+                   <a href="http://news.gzhu.edu.cn/xiaoyuantongzhi/">更多></a>
+                </span>
+             </p>
+           </div>
+           <div class="main-1-left-box2-left-tongzhi-bottom">
+             <ul>
+               <li><a href="http://news.gzhu.edu.cn/xiaoyuantongzhi/2017-05-12/24064.html" target="_blank" title="巡 察 公 告">巡 察 公 告</a>
+               <span>05-13</span></li>
+               <li><a href="http://news.gzhu.edu.cn/xiaoyuantongzhi/2017-08-09/24372.html" target="_blank" title="广州大学2018年硕士研究生招生简章">广州大学2018年硕士研究生招生简章...</a>
+               <span>08-09</span></li>
+               <li><a href="http://news.gzhu.edu.cn/xiaoyuantongzhi/2017-07-07/24310.html" target="_blank" title="关于广州大学 2017年度拟新增专业申报的公示">关于广州大学 2017年度拟新增专业申报...</a>
+               <span>07-07</span></li>
+               <li><a href="http://news.gzhu.edu.cn/xiaoyuantongzhi/2017-07-04/24281.html" target="_blank" title="关于做好2017年暑期校园安全工作的通知">关于做好2017年暑期校园安全工作的通知...</a>
+               <span>07-04</span></li>
+             </ul>
+           </div>
+
+           </div><!--tongzhi-->
+           <div class="main-1-left-box2-left-meiti">
+             <div class="main-1-left-box2-left-meiti-top">
+               <p>
+                   <span class="bt">媒体广大</span>
+                   <span class="more">
+                     <a href="http://news.gzhu.edu.cn/meitiguangda/">更多></a>
+                   </span>
+               </p>
+             </div>
+             <div class="main-1-left-box2-left-meiti-bottom">
+                <ul>
+                   <li><a href="http://news.gzhu.edu.cn/meitiguangda/2017-07-11/24319.html" target="_blank" title="【人民网】广州大学校长毕业寄语：坦然拥抱和妥善应对挫折">【人民网】广州大学校长毕业寄语：坦然拥...</a>
+                   <span>07-11</span>
+                   </li>
+                   <li><a href="http://news.gzhu.edu.cn/meitiguangda/2017-07-13/24328.html" target="_blank" title="【番禺日报】广州大学实习基地 在化龙中心小学挂牌">【番禺日报】广州大学实习基地 在化龙...</a>
+                   <span>07-10</span>
+                   </li>
+                   <li><a href="http://news.gzhu.edu.cn/meitiguangda/2017-07-07/24306.html" target="_blank" title="【中国社会科学网】广州对外开放面临新的历史机遇">【中国社会科学网】广州对外开放面临新...</a>
+                   <span>07-07</span>
+                   </li>
+                   <li><a href="http://news.gzhu.edu.cn/meitiguangda/2017-07-07/24305.html" target="_blank" title="【中国经济导报】《广州经济蓝皮书》：科技创新仍不及京沪深">【中国经济导报】《广州经济蓝皮书》：科...</a><span>07-07</span>
+                   </li>
+
+                </ul>
+             </div>
+           </div>
+          </div><!--left-->
+         <div class="main-1-left-box2-right">
+           <div class="main-1-left-box2-right-dongtai">
+             <div class="main-1-left-box2-right-dongtai-top">
+               <p>
+                  <span class="bt">学术动态</span>
+                  <span class="more"><a href="http://news.gzhu.edu.cn/xueshudongtai/">更多&gt;</a></span>
+               </p>
+             </div>
+             <div class="main-1-left-box2-right-dongtai-bottom">
+               <ul>
+                 <li><a href="http://news.gzhu.edu.cn/xueshudongtai/2017-07-28/24364.html" target="_blank" title="2018年首届“粤港澳大湾区文化研究论坛”">2018年首届“粤港澳大湾区文化研究论坛...</a>
+                   <span>07-28</span>
+                 </li>
+                
+                 <li><a href="http://news.gzhu.edu.cn/xueshudongtai/2017-07-25/24353.html" target="_blank" title="生命科学学院“高端学术论坛”之七十一">生命科学学院“高端学术论坛”之七十一...</a>
+                    <span>07-25</span>
+                 </li>
+                 <li><a href="http://news.gzhu.edu.cn/xueshudongtai/2017-07-17/24337.html" target="_blank" title="生命科学学院“高端学术论坛”之六十六～七十">生命科学学院“高端学术论坛”之六十六...</a>
+                   <span>07-17</span>
+                 </li>
+               </ul>
+             </div>
+           </div>
+           <div class="main-1-left-box2-right-xiaobao">
+                <div class="main-1-left-box2-right-xiaobao-top">
+                     <p>
+                       <span class="bt">广大校报</span>
+                       <span class="more"><a href="http://202.192.19.43/index.aspx">更多&gt;</a></span>
+                     </p>
+                </div>
+                <div class="main-1-left-box2-right-xiaobao-bottom">
+                  <ul>
+                    <li><iframe src="http://202.192.19.43/test.html" scrolling="no" style="border-top: medium none; height: 135px; border-right: medium none; width: 330px; border-bottom: medium none; border-left: medium none; frameborder: 0px"></iframe></li>
+                  </ul>
+                </div>
+           </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="main-1-right">
+          <div class="main-1-right-tongdao">
+            <div class="main-1-right-tongdao-top">
+               <p><span class="bt">快速通道</span></p>
+            </div>
+            <div class="main-1-right-tongdao-bottom">
+              <ul>
+                <li class="tongdao1">
+                  <img src="images/06.png" alt="">
+                  <a href="https://cas.gzhu.edu.cn/cas_server/login"><img src="images/06-hover.png" alt="">数字广大</a>
+                </li>
+                <li class="tongdao2">
+                  <img src="images/02.png" alt="">
+                  <a href="http://news.gzhu.edu.cn/"><img src="images/02-hover.png" alt="">新闻中心</a>
+                </li>
+                <li class="tongdao3">
+                  <img src="images/03.png" alt="">
+                  <a href="http://lib.gzhu.edu.cn"><img src="images/03-hover.png" alt="">图 书 馆</a>
+                </li>
+                <li class="tongdao4">
+                 <img src="images/04.png" alt="">
+                 <a href="http://portal.gzhu.edu.cn/web/archives/"><img src="images/04-hover.png" alt="">档 案 馆</a>
+                </li>
+                <li class="tongdao5">
+                  <img src="images/05.png" alt="">
+                  <a href="http://portal.gzhu.edu.cn/web/zbb/index"><img src="images/05-hover.png" alt="">招标信息</a>
+                </li>
+                <li class="tongdao6">
+                   <img src="images/01.png" alt="">
+                   <a href="http://mail.gzhu.edu.cn/"><img src="images/01-hover.png" alt="">个人邮箱</a>
+                </li>
+                <li class="tongdao7">
+                  <img src="images/07.png" alt="">
+                  <a href="http://youth.gzhu.edu.cn/"><img src="images/07-hover.png" alt="">校园文化</a>
+
+                </li>
+                <li class="tongdao8">
+                  <img src="images/08.png" alt="">
+                  <a href="http://xyh.gzhu.edu.cn/"><img src="images/08-hover.png" alt="">校友之窗</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-1-right-xinxiang">
+               <div class="xinxiang-left">
+                  <a href="http://www2.gzhu.edu.cn/shujixx.jsp?urltype=leadermail.LeaderMailsAddUrl&amp;wbtreeid=1081">书记信箱</a>
+                </div>
+                <div class="xinxiang-right">
+                  <a href="http://www2.gzhu.edu.cn/xiaozhangxx.jsp?urltype=leadermail.LeaderMailsAddUrl&amp;wbtreeid=1082">校长信箱</a>
+             </div>
+            </div>
+          <div class="main-1-right-zhuanti">
+               <div class="main-1-right-zhuanti-top">
+                 <p><span class="bt">专题网站</span></p>
+               </div>
+               <div class="main-1-right-zhuanti-bottom">
+                 <ul>
+                  <li>
+                    <a href="http://xcb.gzhu.edu.cn/">
+                     <img src="http://www.gzhu.edu.cn/images/right-bottom/lxyz.jpg" alt="" height="62px;">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://shpg.gzhu.edu.cn/">
+                     <img src="http://www.gzhu.edu.cn/images/right-bottom/shpg.jpg" alt="">
+                    </a>
+                  </li>
+                  <li>
+                     <a href="http://news.gzhu.edu.cn/zhuantishidian"><img src="http://www.gzhu.edu.cn/images/right-bottom/gdrgds.jpg" alt=""></a>
+                  </li>
+                  <li><a href="http://videonews.gzhu.edu.cn/"><img src="http://www.gzhu.edu.cn/images/right-bottom/sy.jpg" alt=""></a></li>
+                 </ul>
+               </div>
+
+
+
+
+
+          </div>
+          </div>
+       </div>
+        <div class="main-2" style="height: 150px;width: 1080px;margin: 1px auto 0px">
+          <div class="main-2-top">
+           <p>
+              <span class="bt">招聘广告</span>
+              <span class="more"><a href="http://portal.gzhu.edu.cn/web/rsc/3;jsessionid=E0F78A71E54FA1DEB5C8D7E724B541B8.tomcat1">更多&gt;</a></span>
+           </p>
+          </div>
+
+          <div class="main-2-bottom">
+           <p>
+            <span><a href="info/1135/2684.htm">广州大学诚邀海外优秀人才申报“青年千人计划”</a></span>
+            <span><a href="info/1135/2636.htm">广州大学2017年国际青年学者论坛通知</a></span>
+            <span><a href="info/1135/2597.htm">广州大学面向全球公开招聘领军人才、学科学术带头人公告</a></span>
+            <span><a href="info/1135/2621.htm">广州大学智能制造工程研究院专项招聘学术创新、技术研发和管理类英才公告</a></span>
+            <span><a href="info/1135/2763.htm">ISR-Research Associate - Experimental PDRA</a></span>
+            <span><a href="info/1135/2762.htm">ISR-Research Associate - Computational PDRA</a></span>
+            <span><a href="info/1135/2622.htm">Faculty Positions - at all levels at the Advanced Institute of Engineering Science for Intelligent Manufacturing, Guangzhou University -</a></span>
+            <span><span><a href="info/1135/2611.htm">广州大学面向全球招聘优秀青年博士公告</a></span></span>
+            <span><a href="http://videonews.gzhu.edu.cn/play.php?id=1786">广州大学人才引进宣传片上线</a></span>
+           </p>
+          </div>
+     </div>     
+   </div>
+   <div class="navbottom">
+         <div class="tab">
+           <ul class="menu">
+            <li class="active">党政机构</li>
+            <li class>学院（部）</li>
+            <li>教辅科研单位</li>
+            <li>直属单位</li>
+            <li>二级学院</li>
+            <li class="menu-hover"><a href="http://zsjy.gzhu.edu.cn/index/zs_.htm">本科招生网</a></li>
+            <li class="menu-hover"><a href="http://portal.gzhu.edu.cn/web/11209844/new-page">信息公开网</a></li>
+            <li class="menu-hover">
+            <a href="http://portal.gzhu.edu.cn/web/rsc/3">人才招聘</a>
+            </li>
+             <li class>热门站点</li>
+            
+           </ul>
+           <div class="con1" style="display: block;">
+            <div class="tab2">
+             <ul>
+              <li>
+               <table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/dbxb/new-page">党委办公室校办公室</a></td></tr></tbody></table>
+              </li>
+              <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/zzb/new-page">党委组织部</a></td></tr></tbody></table></li>
+              <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/public/new-page">党委宣传部</a></td></tr></tbody></table></li>
+              <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/alumni">党委统战部</a></td></tr></tbody></table></li>
+              <li><table><tbody><tr><td><a href="http://portal.gzhu.edu.cn/web/jw/new-page">纪委办（监察处）</a></td></tr></tbody></table></li>
+            <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/rsc/home">人事处（人才工作办公室、...</a></td></tr></tbody></table></li>
+            <li><table><tbody><tr><td valign="middle" height="27"><a href="http://cwc.gzhu.edu.cn">财务处（国有资产管理办公室）</a></td></tr></tbody></table></li>
+                <li><table><tbody><tr><td valign="middle" height="27"><a href="http://jwc.gzhu.edu.cn/">教务处（教育教学评估中心）</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://kyc.gzhu.edu.cn/">科研处</a></td></tr></tbody></table></li>
+                  <li><table><tbody><tr><td valign="middle" height="27"><a href="#">发展规划处</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/yjsc">研究生处（研究生工作部）</a></td></tr></tbody></table></li>
+                  <li><table><tbody><tr><td valign="middle" height="27"><a href="http://xsc.gzhu.edu.cn/">党委学生工作部（学生工作处）</a></td></tr></tbody></table></li>
+                  <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/wsc/1">国际交流与合作处（港澳台...</a></td></tr></tbody></table></li>
+                   <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/26470/new-page">实验室与设备管理处</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/hqservice/2/">后勤服务处</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://www.gzhu.edu.cn/system/site/column/news/addnews.jsp?actiontype=save&amp;wbcontentid=121779&amp;comfrom=&amp;newsposition=news&amp;wbnewsid=2323&amp;backurl=newscontent.jsp&amp;rid=113eas4i8p&amp;treeid=1016&amp;pendingnewsauth=0&amp;wbspecialid=0&amp;wbspecialtypeid=0&amp;owner=1302601108&amp;us">基建处</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/bwc/7">保卫处（武装部）</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/sjc/aa">审计处</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/ltxc/6">离退休工作处</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://zsjy.gzhu.edu.cn/">招生就业工作处</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="#">机关党委</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/gh">工会</a></td></tr></tbody></table></li>
+                 <li><table><tbody><tr><td valign="middle" height=""><a href="http://youth.gzhu.edu.cn/">团委</a></td></tr></tbody></table></li>
+                  <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/zbb/index">招投标办公室</a></td></tr></tbody></table></li>
+                   <li><table><tbody><tr><td valign="middle" height="27"><a href="http://xyh.gzhu.edu.cn/">校友会</a></td></tr></tbody></table></li>
+                    <li><table><tbody><tr><td valign="middle" height="27"><a href="http://portal.gzhu.edu.cn/web/3814622/new-page">普通话测试（语委办）</a></td></tr></tbody></table></li>
+                     <li><table><tbody><tr><td valign="middle" height="27"><a href="http://jjh.gzhu.edu.cn/">教育发展基金会</a></td></tr></tbody></table></li>                                  
+             </ul>
+            </div>
+           </div>
+           <div class="con2">
+           </div>
+           <div class="con3"></div>
+           <div class="con4"></div>
+           <div class="con5">
+            <div class="con6"></div>
+            <div class="con7"></div>
+            <div class="con8"></div>
+           </div>
+           <div class="con9"></div>
+         </div>
+       </div>
+     </div>
+      <div class="footer" style="background: none transparent scroll repeat 0% 0%">
+      <div class="footer-con">
+        <div class="footer-con1">
+          <img src="http://www.gzhu.edu.cn/images/logo.png" border="0" width="163" height="42">
+        </div>
+        <div class="footer-con2">
+           <div class="footer-con2-dizhi">
+            <p> 通讯地址：广州市大学城外环西路230号 </p>
+            <p>
+              邮编:510006
+              <span id="youxiang">
+                邮箱:
+                <a href="webmaster@gzhu.edu.cn" style="color: #ffffff;">webmaster@gzhu.edu.cn</a>
+              </span>
+            </p>
+           </div>
+           <div class="footer-con2-xl">
+            <a href="http://weibo.com/gzhuedu"><img src="http://www.gzhu.edu.cn/images/xl.png" alt width="70" height="70"></a>
+           </div>
+           <div class="footer-con2-wx"><a id="wxbox" href><img src="http://www.gzhu.edu.cn/images/wx.png"><img id="wxpic" src="http://www.gzhu.edu.cn/images/wxewm.jpg"></a></div>
+        </div>
+        <div class="footer-con3">
+         <span class="_ideConac">
+            <a href="http://bszs.conac.cn/sitename?method=show&id=3BE6433AD24D5E3AE053012819ACDD57" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="http://dcs.conac.cn/image/blue.png" data-bd-imgshare-binded="1"></a>
+         </span>
+        </div>
+        <div class="footer-con4">
+          <p>
+            广州大学版权所有&nbsp; COPYRIGHT©1999-2016,&nbsp;&nbsp; GUANGZHOU&nbsp; UNIVERSITY&nbsp;&nbsp; -
+            <a href="mailto:webmaster@gzhu.edu.cn" style="color: #ffffff">联系我们</a>
+            <a href="wzdt1.htm" target="_blank" style="color: #ffffff">网站地图</a>
+            &nbsp; 粤ICP备 05008855号
+          </p>
+        </div>
+      </div>
+      </div>
+</body>
+</html>
